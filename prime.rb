@@ -5,7 +5,7 @@ def prime?(number)
     return false
   elsif number == 2
     return true
-  elsif (2...number - 1).any? do |int|
+  elsif number.any? do |int|
       number.any? % int == 0
         return false
     end
