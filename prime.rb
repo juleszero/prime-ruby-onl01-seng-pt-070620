@@ -5,8 +5,8 @@ def prime?(number)
     return false
   elsif number == 2
     return true
-  elsif number.any? do |int|
-      (2...number - 1) % int == 0
+  elsif (2...number - 1).any? do |int|
+       number % int == 0
         return false
     end
   else
