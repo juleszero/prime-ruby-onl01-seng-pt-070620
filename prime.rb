@@ -5,11 +5,11 @@ def prime?(number)
     return false
   elsif number == 2
     return true
-  elsif (2...number - 1).each do |int|
-      if number % int == 0
+  elsif (2...number - 1).any? do |int|
+      if number.any? % int == 0
         return false
-      end
     end
+  end
   else
      return true    
   end  
